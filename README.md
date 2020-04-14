@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 # NextJS with Typescript Starter
 
 This is a minimal setup for NextJS application that work with:
@@ -46,3 +47,7 @@ This example show how to set custom environment variables for your **docker appl
 The `dockerfile` is the simplest way to run Next.js app in docker, and the size of output image is `173MB`. However, for an even smaller build, you can do multi-stage builds with `dockerfile.multistage`. The size of output image is `85MB`.
 
 You can check the [Example Dockerfile for your own Node.js project](https://github.com/mhart/alpine-node/tree/43ca9e4bc97af3b1f124d27a2cee002d5f7d1b32#example-dockerfile-for-your-own-nodejs-project) section in [mhart/alpine-node](https://github.com/mhart/alpine-node) for more details.
+=======
+# ibeeliot.io
+Software Engineer portfolio
+>>>>>>> 0c82fcd422da43f994f7ea668a1f7e98cfaff743
