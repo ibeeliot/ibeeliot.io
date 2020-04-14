@@ -1,6 +1,6 @@
-const withCss = require("@zeit/next-css");
-const withPlugins = require("next-compose-plugins");
-const TsConfigPathsPlugin = require("tsconfig-paths-webpack-plugin");
+const withCss = require('@zeit/next-css');
+const withPlugins = require('next-compose-plugins');
+const TsConfigPathsPlugin = require('tsconfig-paths-webpack-plugin');
 
 const nextConfig = {
   webpack: config => {
@@ -14,11 +14,13 @@ const nextConfig = {
   },
   serverRuntimeConfig: {
     // Will only be available on the server side
-    mySecret: "secret"
+    mySecret: 'secret'
   },
   env: {
     // Will be available on both server and client
-    API_URL: process.env.REACT_APP_SERVICE_URL
+    API_URL: process.env.REACT_APP_SERVICE_URL,
+    CONTENTFUL_SPACE_ID: process.env.CONTENTFUL_SPACE_ID,
+    CONTENTFUL_ACCESS_TOKEN: process.env.CONTENTFUL_ACCESS_TOKEN
   }
 };
 
