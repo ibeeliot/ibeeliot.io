@@ -1,7 +1,0 @@
-.next/
-node_modules/
-Dockerfile*
-.DS_Store
-tags
-.vim
-.vscode

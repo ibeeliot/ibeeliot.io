@@ -1,28 +1,43 @@
-const withCss = require('@zeit/next-css');
-const withPlugins = require('next-compose-plugins');
-const TsConfigPathsPlugin = require('tsconfig-paths-webpack-plugin');
+const path = require('path')
+const glob = require('glob')
 
-const nextConfig = {
-  webpack: config => {
-    if (config.resolve.plugins) {
-      config.resolve.plugins.push(new TsConfigPathsPlugin());
-    } else {
-      config.resolve.plugins = [new TsConfigPathsPlugin()];
-    }
-
-    return config;
+module.exports = {
+  webpack: (config, { dev }) => {
+    config.module.rules.push(
+      {
+        test: /\.(css|scss)/,
+        loader: 'emit-file-loader',
+        options: {
+          name: 'dist/[path][name].[ext]'
+        }
+      },
+      {
+        test: /\.css$/,
+        use: ['babel-loader', 'raw-loader', 'postcss-loader']
+      },
+      {
+        test: /\.s(a|c)ss$/,
+        use: ['babel-loader', 'raw-loader', 'postcss-loader',
+          { loader: 'sass-loader',
+            options: {
+              outputStyle: 'compressed', // These options are from node-sass: https://github.com/sass/node-sass
+              includePaths: ['styles', 'node_modules']
+                .map((d) => path.join(__dirname, d))
+                .map((g) => glob.sync(g))
+                .reduce((a, c) => a.concat(c), [])
+            }
+          }
+        ]
+      }
+    )
+    return config
   },
-  serverRuntimeConfig: {
-    // Will only be available on the server side
-    mySecret: 'secret'
-  },
-  env: {
-    // Will be available on both server and client
-    API_URL: process.env.REACT_APP_SERVICE_URL,
-    CONTENTFUL_SPACE_ID: process.env.CONTENTFUL_SPACE_ID,
-    CONTENTFUL_ACCESS_TOKEN: process.env.CONTENTFUL_ACCESS_TOKEN
-  }
-};
-
-// next.config.js
-module.exports = withPlugins([withCss], nextConfig);
+  // exportPathMap: function(defaultPathMap) {
+  //   return {
+  //     '/': { page: '/' },
+  //     '/landing': { page: '/landing' },
+  //     '/generic': { page: '/generic' },
+  //     '/landing': { page: '/landing' }
+  //   }
+  // }
+}

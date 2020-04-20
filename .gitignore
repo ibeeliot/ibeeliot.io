@@ -1,7 +1,7 @@
-.next/
-node_modules/
 .DS_Store
-tags
-.vim
+.next
 .vscode
-.env
+out/
+node_modules
+yarn.lock
+package-lock.json
