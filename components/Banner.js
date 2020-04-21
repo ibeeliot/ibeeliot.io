@@ -1,4 +1,6 @@
+import PropTypes from 'prop-types';
 import Typewriter from 'typewriter-effect';
+import Menu from './Menu';
 
 const Banner = props => (
   <section id="banner" className="major">
@@ -15,16 +17,28 @@ const Banner = props => (
         />
       </div>
       <div>
-        <ul className="actions">
-          <li>
-            <a href="#one" className="button next scrolly">
+        {/* <ul className="actions">
+          <li> */}
+        {/* <a href="#one" className="button next scrolly">
               About Me
+            </a> */}
+        {/* <a
+              className="menu-link button next"
+              onClick={props.onToggleMenu}
+              href="javascript:;"
+            >
+              About me
             </a>
-          </li>
-        </ul>
+          </li> */}
+        {/* </ul> */}
+        <Menu></Menu>
       </div>
     </div>
   </section>
 );
+
+Banner.propTypes = {
+  onToggleMenu: PropTypes.func
+};
 
 export default Banner;
