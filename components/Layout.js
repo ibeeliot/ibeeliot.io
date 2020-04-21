@@ -28,6 +28,7 @@ class Layout extends React.Component {
     }
   }
 
+  // component handles open/close from this function
   handleToggleMenu() {
     this.setState({
       isMenuVisible: !this.state.isMenuVisible
@@ -63,6 +64,7 @@ class Layout extends React.Component {
           <Footer />
         </div>
         <Menu onToggleMenu={this.handleToggleMenu} />
+        <div></div>
       </div>
     );
   }
