@@ -2,7 +2,7 @@ import PropTypes from 'prop-types';
 import Link from 'next/link';
 
 const Menu = props => (
-  <nav id="menu">
+  <nav className="menu">
     <div className="inner">
       <ul className="links">
         <li>

@@ -6,7 +6,7 @@
 
 /* Menu */
 
-#menu {
+.menu {
   @include vendor(
     'transition',
     (
@@ -159,7 +159,7 @@
 }
 
 body.is-ie {
-  #menu {
+  .menu {
     background: transparentize(_palette(bg-alt), 0.025);
   }
 }
@@ -169,7 +169,7 @@ body.is-ie {
     @include vendor('filter', 'blur(0.5em)');
   }
 
-  #menu {
+  .menu {
     @include vendor('pointer-events', 'auto');
     opacity: 1;
     visibility: visible;

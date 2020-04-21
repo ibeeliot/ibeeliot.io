@@ -28,7 +28,7 @@ class Layout extends React.Component {
     }
   }
 
-  // component handles open/close from this function
+  // component handles open/close from this
   handleToggleMenu() {
     this.setState({
       isMenuVisible: !this.state.isMenuVisible
