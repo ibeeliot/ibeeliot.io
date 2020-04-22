@@ -10,8 +10,7 @@ body {
 
 .App {
   text-align: center;
-  /* background: url('./assets/imgs/background5.jpg') center center no-repeat; */
-  /* background-size: contain; */
+
   height: 100%;
 }
 
@@ -218,6 +217,9 @@ li .link:hover {
   grid-template-columns: repeat(2, 1fr);
   grid-gap: 2em;
 }
+.project {
+  margin-left: 5em;
+}
 
 .project img {
   width: 30em;
@@ -348,6 +350,18 @@ li .link:hover {
     grid-template-columns: 1fr;
     grid-gap: 5em;
   }
+
+  .project h1,
+  .project span {
+    font-size: 11px;
+    padding-bottom: 5px;
+    margin-bottom: 1em;
+    line-height: 10px;
+  }
+
+  .project span {
+    margin-top: -3px;
+  }
   .project img {
     margin-left: 4em;
     width: 55em;
@@ -464,10 +478,16 @@ li .link:hover {
   }
 }
 
+.contactWord {
+  font-size: 3em;
+  text-align: center;
+  margin-top: -3em;
+  margin-left: -5em;
+}
+
 /* Large screens ----------- */
 @media only screen and (min-width: 1824px) {
   /* Styles */
-
   body {
     font-size: 20px;
   }
@@ -509,7 +529,8 @@ li .link:hover {
   .work {
     left: 10em;
     top: 4em;
-    align-items: flex-start;
+    align-items: center;
+    justify-content: space-evenly;
   }
   .work .work-content {
     display: grid;

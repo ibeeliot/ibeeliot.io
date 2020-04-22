@@ -8,18 +8,9 @@ class Contact extends Component {
   render() {
     return (
       <div>
-        <h1>
+        <h1 className="heading">
           <Fade bottom cascade>
-            {/* <div className="container">
-              <span>T</span>
-              <span>r</span>
-              <span>a</span>
-              <span>v</span>
-              <span>e</span>
-              <span>l</span>
-              <span>.</span>
-              <div class="cursor"></div>
-            </div> */}
+            Contact
           </Fade>
         </h1>
         <Fade bottom>
@@ -37,9 +28,6 @@ class Contact extends Component {
             </div>
             <h1>
               <br></br>
-              <span className="amazing-color">
-                let's see what <br></br>we can build together
-              </span>
             </h1>
 
             {/* <ul>
@@ -54,9 +42,9 @@ class Contact extends Component {
           </div>
         </Fade>
 
-        <span className="footer">
+        {/* <span className="footer">
           <a href="http://www.github.com/ibeeliot">ibeeliot</a>
-        </span>
+        </span> */}
       </div>
     );
   }
