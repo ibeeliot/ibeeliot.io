@@ -10,8 +10,16 @@ class Contact extends Component {
       <div>
         <h1>
           <Fade bottom cascade>
-            {' '}
-            Contact{' '}
+            {/* <div className="container">
+              <span>T</span>
+              <span>r</span>
+              <span>a</span>
+              <span>v</span>
+              <span>e</span>
+              <span>l</span>
+              <span>.</span>
+              <div class="cursor"></div>
+            </div> */}
           </Fade>
         </h1>
         <Fade bottom>
