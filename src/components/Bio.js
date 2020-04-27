@@ -11,13 +11,13 @@ const style = {
     padding: '1rem 3rem 8rem 3rem',
     width: '80vw',
     borderRadius: '5px',
-    fontSize: '1.3em',
+    fontSize: '2em',
     lineHeight: '2em',
     height: '80vh',
     position: 'absolute',
     background: 'rgb(255, 255, 255)',
-    top: '-21em',
-    left: '-49rem',
+    top: '-19em',
+    left: '-62rem',
     transition: 'all 500ms ease-in-out',
     textAlign: 'justify'
   }
