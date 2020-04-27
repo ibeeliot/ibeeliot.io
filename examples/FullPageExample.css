@@ -215,7 +215,7 @@ body
   position: absolute;
   z-index: 20;
   font-size: 7em;
-  margin-top: -29rem;
+  margin-top: -22rem;
   margin-left: -5em;
   text-shadow: 2px 2px 3px rgba(40, 5, 78, 0.76);
   color: #fff;
@@ -344,16 +344,48 @@ body
 
 /* SMALL PHONE SCREEN SIZE */
 @media only screen and (max-width: 980px) {
+  /* profile picture */
+  #root > div > div > div:nth-child(2) > div > img {
+    border-radius: 50%;
+    height: 30rem;
+  }
+  .headerNavigation {
+    padding-left: 5px;
+  }
+
+  /* home page */
+  .homePage h1:nth-child(2) {
+    margin-left: -10rem;
+    font-size: 2.5rem;
+  }
+
+  .homePage h1:nth-child(3) {
+    margin-left: -11rem;
+    font-size: 2rem;
+  }
+
+  /* header buttons */
+  .headerButtons {
+    font-size: 0.5rem;
+    height: 2rem;
+    /* width: 40px; */
+    /* margin: 10px 10px; */
+    margin-left: 0.3rem;
+  }
+
   .bio-page {
     position: absolute !important;
-    top: -31rem !important;
-    margin-left: 23rem !important;
+    top: -14rem !important;
+    /* margin-left: 23rem !important; */
+    font-size: 0.7rem !important;
+    left: -33rem !important;
+    height: 100vh !important;
   }
 
   .projects-title {
-    font-size: 3em;
-    margin-top: -8em;
-    margin-left: -1rem;
+    font-size: 2rem;
+    margin-top: -18.5rem;
+    margin-left: 0rem;
   }
 
   .carousel .slide img {
@@ -362,6 +394,60 @@ body
     margin-bottom: 12em;
     box-shadow: 2px 2px 3px 5px rgba(40, 55, 78, 0.76);
     /* text-shadow: 2px 2px 3px 3px rgba(40, 55, 78, 0.76); */
+  }
+
+  /* about me */
+  .about-pic {
+    border-radius: 50%;
+    height: 35rem;
+    width: auto;
+    margin-top: -17em;
+    margin-left: -4em;
+    position: absolute;
+  }
+
+  /* about me h1 */
+  .aboutPage h1:nth-child(2) {
+    font-size: 3rem;
+    top: -2rem;
+    left: 2rem;
+  }
+
+  .aboutPage h1:nth-child(3) {
+    font-size: 2rem;
+    top: -2rem;
+    left: 2rem;
+  }
+
+  #root > div > div > div:nth-child(6) > div > div:nth-child(1) > button {
+    height: 1rem !important;
+    padding-bottom: 3rem !important;
+    font-size: 1.5rem !important;
+    margin-top: 15rem;
+  }
+
+  .flib-card {
+    position: absolute;
+    top: 2rem !important;
+    left: -29rem !important;
+  }
+
+  /* cards */
+  .cardbox {
+    margin-bottom: 0;
+    height: 9rem;
+  }
+
+  .card {
+    width: 100px !important;
+    height: 100px !important;
+  }
+
+  .svg-social {
+    position: absolute;
+    width: 6.3rem;
+    left: 0rem;
+    top: -1.5rem;
   }
 
   .contactPage h1 {

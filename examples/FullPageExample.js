@@ -89,7 +89,7 @@ const FullPageExample = () => {
           <div className="homePage">
             <img
               className="profile-pic"
-              src="../src/imgs/blk-whte-profile-colored.png"
+              src="https://i.postimg.cc/9F0jg1qx/blk-whte-profile-colored.png"
             ></img>
             <h1>Eliot Nguyen</h1>
             <h1>Front End Developer</h1>
@@ -115,10 +115,12 @@ const FullPageExample = () => {
               <img
                 className="work-image"
                 alt=""
-                src="../src/imgs/reacType-application-tree.jpg"
+                src="https://i.postimg.cc/Zqt8D70p/reac-Type-application-tree.jpg"
               />
               <div className="legend">
-                <a href="github.com/open-source-labs/ReacType">ReacType</a>
+                <a href="https://github.com/open-source-labs/ReacType">
+                  ReacType
+                </a>
                 <p>A dev tool for quickly creating React components</p>
               </div>
             </div>
@@ -126,7 +128,7 @@ const FullPageExample = () => {
               <img
                 className="work-image"
                 alt=""
-                src="../src/imgs/fireside-wallpaper.jpg"
+                src="https://i.postimg.cc/4ymH3VmX/fireside-wallpaper.jpg"
               />
               <div className="legend">
                 <a href="https://github.com/Fireside-App/Fireside">Fireside</a>
@@ -138,7 +140,7 @@ const FullPageExample = () => {
                 className="work-image"
                 alt=""
                 border="0"
-                src="../src/imgs/jackboxtv.jpg"
+                src="https://i.postimg.cc/SKSLcZsr/jackboxtv.jpg"
               />
               <div className="legend">
                 <a href="https://github.com/findgaming/find">Find</a>
@@ -149,7 +151,7 @@ const FullPageExample = () => {
               <img
                 className="work-image"
                 alt=""
-                src="../src/imgs/Travel-Sticky.jpg"
+                src="https://i.postimg.cc/W34nc9c3/Travel-Sticky.jpg"
               />
               <div className="legend">
                 <a href="https://github.com/ibeeliot/TravelSticky">
@@ -181,7 +183,7 @@ const FullPageExample = () => {
                 <div>
                   <img
                     className="about-pic"
-                    src="../src/imgs/about-blk-wht.png"
+                    src="https://i.postimg.cc/yNBQtYbV/about-blk-wht.png"
                   ></img>
                   <h1>
                     {/* <Typewriter
