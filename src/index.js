@@ -1,6 +1,9 @@
-import React from 'react';
-import ReactDOM from 'react-dom';
-import './index.css';
-import App from './App';
+const FullPage = require('./components/FullPage');
+const Slide = require('./components/Slide');
+const { withControls } = require('./components/ControlProvider');
 
-ReactDOM.render(<App />, document.getElementById('root'));
+module.exports = {
+  withControls,
+  FullPage,
+  Slide
+};

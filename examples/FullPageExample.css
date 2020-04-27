@@ -1,0 +1,362 @@
+/* controlling the typewriter  */
+*,
+*::after,
+*::before,
+body,
+html {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  font-family: 'M PLUS Rounded 1c', sans-serif;
+}
+
+/* border gaps */
+.gaps {
+  background: #fff;
+}
+
+/* HEADER  / Navigation */
+
+.headerButtons {
+  font-size: 1rem;
+  color: white;
+  border: 2px solid rgba(255, 255, 255, 0.3);
+  background: none;
+  padding: 17px 10px;
+  border-radius: 50%;
+  margin: 1rem;
+  height: 4rem;
+}
+/* dfsdfd */
+.headerButtons:hover {
+  border: 2px #fff;
+  background: rgba(255, 255, 255, 0.3);
+  transform: scale(1.12);
+}
+
+/* BAD PRACTICE */
+/* HIDE 5,6 child  */
+body > div > div > div > div.headerNavigation > button:nth-child(6),
+body > div > div > div > div.headerNavigation > button:nth-child(7),
+body > div > div > div > div.headerNavigation > button:nth-child(8) {
+  display: none;
+}
+
+.headerSlideButtons {
+  border: 1px solid rgba(255, 255, 255, 0.76);
+  border-radius: 50%;
+  padding: 5px;
+  color: #fff;
+  background: none;
+}
+
+/* header navigation contains both arrow buttons */
+.headerNavigation {
+  margin-left: 10px;
+}
+
+.homePage,
+.aboutPage,
+.contactPage {
+  display: flexbox;
+  position: relative;
+}
+
+.homePage h1:nth-child(2) {
+  color: #fff;
+  font-size: 5em;
+  text-shadow: 4px 4px 7px rgba(40, 55, 78, 0.76);
+  margin-left: -5em;
+  width: 5em;
+  white-space: nowrap;
+  position: absolute;
+  z-index: 15;
+}
+
+.homePage h1:nth-child(3) {
+  color: rgb(255, 255, 255);
+  font-size: 3em;
+  text-shadow: 4px 4px 7px rgba(40, 55, 78, 0.76);
+  margin-left: -8.2em;
+  margin-top: 2em;
+  white-space: nowrap;
+  position: absolute;
+  z-index: 15;
+}
+
+/* ABOUT */
+.buttonStyle:hover {
+  transform: scale(1.1);
+  color: #fff;
+}
+
+/* profile picture */
+.profile-pic {
+  border-radius: 50%;
+  height: 35em;
+  width: auto;
+  margin-top: -18em;
+  margin-left: -10em;
+  position: absolute;
+}
+
+.about-pic {
+  border-radius: 50%;
+  height: 57em;
+  width: auto;
+  margin-top: -26em;
+  margin-left: -4em;
+  position: absolute;
+}
+
+/* about page last */
+body > div > div > div.my-container > div:nth-child(6) {
+  margin-top: -3em;
+}
+
+#target {
+  background: #0099cc;
+  width: 300px;
+  height: 300px;
+  height: 160px;
+  padding: 5px;
+  display: none;
+  position: absolute;
+  z-index: 11;
+}
+
+.Hide {
+  z-index: 12;
+  position: absolute;
+  display: none;
+}
+
+.aboutPage h1:nth-child(2) {
+  color: #fff;
+  font-size: 6em;
+  text-shadow: 4px 4px 7px rgba(40, 55, 78, 0.76);
+  margin-left: -4em;
+  width: 5em;
+  margin-top: 0.5em;
+  white-space: nowrap;
+  position: absolute;
+  z-index: 15;
+}
+
+.aboutPage h1:nth-child(3) {
+  color: #fff;
+  font-size: 4em;
+  text-shadow: 4px 4px 7px rgba(40, 55, 78, 0.76);
+  margin-left: -6em;
+  margin-top: 2.2em;
+  white-space: nowrap;
+  position: absolute;
+  z-index: 15;
+}
+
+.legend:hover {
+  transform: scale(1.2);
+}
+
+.legend a {
+  font-size: 4em !important;
+  font-weight: 600;
+  text-decoration: none;
+  color: #fff;
+  cursor: pointer;
+}
+
+.legend a:hover {
+  cursor: pointer;
+}
+
+.legend p {
+  font-size: 2em !important;
+  font-weight: 600;
+}
+
+/* carousel status */
+.carousel-status {
+  display: none;
+}
+
+.carousel .slide .legend {
+  background: rgba(77, 97, 116, 0.4) !important;
+  border: 1px solid rgba(255, 255, 255, 0.7);
+}
+
+/* carousel slides */
+/* carousel */
+body
+  > div
+  > div
+  > div.my-container
+  > div:nth-child(4)
+  > div.carousel-root
+  > div:nth-child(2)
+  > div
+  > ul {
+  display: none;
+}
+
+.carousel .slide {
+  background: none !important;
+}
+
+/* pink circle */
+.background-circle {
+  z-index: -3;
+  height: 50%;
+  /* margin-top: -15em; */
+}
+
+/* projects title (also known as works) */
+.projects-title {
+  position: absolute;
+  z-index: 20;
+  font-size: 7em;
+  margin-top: -29rem;
+  margin-left: -5em;
+  text-shadow: 2px 2px 3px rgba(40, 5, 78, 0.76);
+  color: #fff;
+}
+
+/* work slide container */
+
+/* work containers & images */
+.work-container {
+  background: url('../src/imgs/pink-circle.png') center center no-repeat;
+  background-size: contain;
+  /* margin-top: 10vh; */
+  justify-content: center;
+}
+
+.work-image {
+  margin-top: 2em;
+  display: inline-block;
+  padding: 1em;
+  width: 35vw !important;
+  box-shadow: 2px 2px 3px 5px rgba(40, 55, 78, 0.76);
+  /* text-shadow: 2px 2px 3px 3px rgba(40, 55, 78, 0.76); */
+}
+
+/* CONTACT PAGE */
+.contactPage {
+  width: 90vw;
+  display: flex;
+  justify-content: center;
+}
+
+.contactPage h1 {
+  color: #fff;
+  font-size: 8rem;
+  text-shadow: 4px 4px 7px rgba(40, 55, 78, 0.76);
+  width: 5em;
+  margin-top: -1.5em;
+  white-space: nowrap;
+  position: absolute;
+  z-index: 15;
+}
+
+/* FLIP CARD */
+.flib-card {
+  margin-bottom: -7rem;
+}
+
+.bio-page {
+  margin-top: -7rem !important;
+  margin-left: -12rem !important;
+}
+
+/*  LAPTOP SIZE */
+@media only screen and (max-width: 1580px) {
+  .work-container {
+    background-size: contain;
+    margin-top: 5vh;
+    justify-content: center;
+  }
+
+  .projects-title {
+    margin-top: -22rem;
+    margin-left: 1rem;
+  }
+
+  .work-image {
+    height: 50vh !important;
+    margin-bottom: 10em;
+    box-shadow: 2px 2px 3px 5px rgba(40, 55, 78, 0.76);
+    /* text-shadow: 2px 2px 3px 3px rgba(40, 55, 78, 0.76); */
+  }
+
+  .bio-page {
+    margin-top: 6rem !important;
+    margin-left: 16rem !important;
+    font-size: 1.5rem !important;
+    width: 85vw !important;
+  }
+
+  .contactPage h1 {
+    margin-top: -22rem;
+  }
+}
+
+/* 13" LAPTOPS OR TABLETS */
+@media only screen and (max-width: 1300px) {
+  .contactPage {
+    margin-top: -24rem;
+  }
+
+  .card {
+    margin-bottom: 7rem;
+  }
+
+  .bio-page {
+    font-size: 1.2rem !important;
+    margin-top: 0rem !important;
+    margin-left: 22rem !important;
+  }
+
+  .flib-card {
+    display: block !important;
+    margin: 0rem 25rem !important;
+  }
+
+  .card-front {
+    margin-bottom: 3rem;
+  }
+
+  .contactPage h1 {
+    margin-top: -12rem;
+  }
+
+  .cardbox {
+    margin: 15px;
+  }
+}
+
+/* SMALL PHONE SCREEN SIZE */
+@media only screen and (max-width: 980px) {
+  .bio-page {
+    position: absolute !important;
+    top: -31rem !important;
+    margin-left: 23rem !important;
+  }
+
+  .projects-title {
+    font-size: 3em;
+    margin-top: -8em;
+    margin-left: -1rem;
+  }
+
+  .carousel .slide img {
+    width: 80% !important;
+    /* height: auto; */
+    margin-bottom: 12em;
+    box-shadow: 2px 2px 3px 5px rgba(40, 55, 78, 0.76);
+    /* text-shadow: 2px 2px 3px 3px rgba(40, 55, 78, 0.76); */
+  }
+
+  .contactPage h1 {
+    margin-top: -19rem;
+  }
+}

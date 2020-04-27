@@ -1,48 +1,88 @@
-# React Portfolio Template
+# react-full-snap
 
-## Minimal Portfolio template for Developers/Designers built with React. Use it to showcase your work, testimonials and other information to clients.
+Full-screen scrolling for react.
 
-Demo - https://react-portfolio-template.netlify.com/
+### This is a clone of [zwug/react-full-page](https://github.com/zwug/react-full-page)
 
-# Preview - 
-![ezgif com-video-to-gif (1)](https://user-images.githubusercontent.com/16558205/59826999-314ace00-9355-11e9-9581-92c6fd160667.gif)
+Used for personal projects while PRs are merged to main repo
 
+[![npm](https://img.shields.io/npm/v/react-full-snap.svg)](https://www.npmjs.com/package/react-full-snap)
 
+### What's different
 
-# The Data can be customised in the src/yourdata.js
+- Multiple slides scrolling when using trackpad or apple mouse has been fixed
+- Enable the plugin to be used inside an element, scrolling inside that element instead of the window. This, paired with mobile resize fix will solve the resizing when scrolling on mobile devices
+- Change hight of container when using container scrolling to other than full-height
+- Custom classes for container and slides
+- Rewritten to an overflow hidden container to avoid scrollbar and account for modern browsers scroll handlers
 
+### Original Instructions
 
+```js
+import React from 'react';
+import { FullPage, Slide } from 'react-full-snap';
 
-This repo contains an easy-to-customize personal portfolio template that was created with React. It is lightweight and fully responsive, as well as comes with the Awesome Animations.
+export default class FullPageExample extends React.Component {
+  render() {
+    return (
+      <FullPage controls>
+        <Slide>
+          <h1>Inner slide content</h1>
+        </Slide>
+        <Slide>
+          <h1>Another slide content</h1>
+        </Slide>
+      </FullPage>
+    );
+  }
+});
+```
 
-## Features 
-* Production Ready
-* Fully Responsive
-* Easy To Customize and Personalise
-* Amazing Animations
-* Minimal & Modern Design
+## Props
 
-## How to use
-1.Clone/Download the repo.
-2.Run npm install or yarn install.
-3.Change the values in src/yourdata.js to suit your use-case.
-4.Run npm start or yarn start to start the local dev server port 3000.(http://localhost:3000).
+- `initialSlide` defaults to `0`
+- `duration` - scroll duration [ms] defaults to `700`
+- `controls` defaults to `false`
+  - `true` adds built-in controls
+  - Pass React component if you want to use your own controls
+- `controlsProps` additional props for controls component
+- `beforeChange` callback executed before scroll
+- `afterChange` callback executed after scroll
+- `scrollMode` `full-page` or `normal` - defaults to `full-page`
 
-# Full Preview - 
-![portfolio](https://user-images.githubusercontent.com/16558205/59826731-7d494300-9354-11e9-92dd-46f7057b6ead.png)
+Both `beforeChange` and `afterChange` will receive as parameter an object like:
 
+```js
+{
+  "from": 0, // the index of the slide react-full-page is scrolling _from_
+  "to": 1, // the index of the slide react-full-page is scrolling _to_
+}
+```
 
-License
-Completely free (MIT)!
+## Slider Controls
 
-Follow Me - 
-[Portfolio](http://chetanverma.com/)
-[Behance](https://www.behance.net/chetanverma)
-[Dribbble](https://dribbble.com/chetanverma)
-[Instagram](https://www.instagram.com/cv.uidesign/)
+Basic controls props (passed automatically)
 
+```js
+  getCurrentSlideIndex: PropTypes.func.isRequired,
+  onNext: PropTypes.func.isRequired,
+  onPrev: PropTypes.func.isRequired,
+  scrollToSlide: PropTypes.func.isRequired,
+  slidesCount: PropTypes.number.isRequired,
+```
 
+Default controls example
 
+```js
+<FullPage controls controlsProps={{ className: 'class-name' }}>
+  ...
+</FullPage>
+```
 
+Custom controls example
 
-
+```js
+<FullPage controls={CustomControls} controlsProps={controlsProps}>
+  ...
+</FullPage>
+```
