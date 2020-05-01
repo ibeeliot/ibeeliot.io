@@ -17,7 +17,6 @@ phases:
       #install dependences
       - echo Installing dependencies...
       - yarn
-      -
   build:
     commands:
       - echo Building...
