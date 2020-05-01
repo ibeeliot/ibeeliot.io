@@ -26,5 +26,5 @@ phases:
     #builds
 artifacts:
   files: -"**/*"
-  discard-paths:
+  discard-paths: no
   nobase-directory: dist
