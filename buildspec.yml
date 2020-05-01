@@ -27,4 +27,4 @@ phases:
 artifacts:
   files: -"**/*"
   discard-paths: no
-  nobase-directory: dist
+  base-directory: dist
