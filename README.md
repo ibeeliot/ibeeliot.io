@@ -13,3 +13,6 @@ This is eliot's portfolio github
 - npm run start
 - npm run build (to use webpack bundle file for hosting)
 - npm dev (nodemon server)
+
+### Developer Notes
+- need to fix scrolling
